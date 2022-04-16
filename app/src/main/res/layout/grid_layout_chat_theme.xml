@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardgrad"
+    android:layout_width="100dp"
+    android:layout_height="150dp"
+    android:background="@color/black"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="30dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/black">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/rounded_grad"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_bg_reply"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:textStyle="normal"
+            android:textColor="@color/white"
+            android:text="Grad Name" />
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

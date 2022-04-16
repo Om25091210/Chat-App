@@ -1,0 +1,70 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorPrimaryDark">#FFFFFF</item>
+        <item name="colorAccent">#4fa881</item>
+        <!-- set Can use Activity transitions -->
+        <item name="android:windowContentTransitions">true</item>
+
+    </style>
+
+    <style name="dialogstyletick" parent="android:style/Theme.Holo.Light.Panel">
+
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="SwitchTheme" parent="Theme.AppCompat.Light">
+
+        <item name="colorControlActivated">#A42196F3</item>
+
+
+        <item name="colorSwitchThumbNormal">#00BCD4</item>
+
+
+        <item name="android:colorForeground">#B2DFDB</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="MyThemeNoActionbar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
+    <style name="EditTextTintTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimaryDark">#0288D1</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TextLabel" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorControlActivated">#FFCC00</item>
+    </style>
+
+    <style name="Translucent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">#03A9F4</item>
+        <item name="colorPrimaryDark">#FFCC00</item>
+        <item name="colorAccent">#4fa881</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="TranslucentBackground" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">#03A9F4</item>
+        <item name="colorPrimaryDark">#FFCC00</item>
+        <item name="colorAccent">#4fa881</item>
+        <item name="android:windowBackground">@drawable/bg</item>
+    </style>
+</resources>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/chat_bg">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/messageInputContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/messageInputContainer"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_margin="6dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/input_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnSend"
+        tools:context=".ui.ChatActivity">
+
+
+        <ImageButton
+            android:id="@+id/addEmoticon"
+            android:layout_width="21dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
+            android:background="@null"
+            android:tint="@color/message_input_button_inactive"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <EditText
+            android:id="@+id/editWriteMessage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:hint="Type a message"
+            android:textColorHint="@color/edit_message_hint"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toRightOf="@+id/addEmoticon"
+            app:layout_constraintRight_toLeftOf="@+id/takePicture" />
+
+        <ImageButton
+            android:id="@+id/takePicture"
+            android:layout_width="22dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="20dp"
+            android:background="@null"
+            android:tint="@color/message_input_button_inactive"
+            android:src="@drawable/ic_camera_alt_black_24dp"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnSend"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:fabCustomSize="48dp"
+        android:layout_margin="6dp"
+        android:layout_marginBottom="10dp"
+        app:backgroundTint="@color/floating_message_send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/messageInputContainer"
+        app:tint="@color/white"
+        android:src="@drawable/ic_send_black_24dp"/>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        emojicon:layout_constraintBottom_toTopOf="@+id/messageInputContainer"
+        emojicon:layout_constraintEnd_toEndOf="parent"
+        emojicon:layout_constraintHorizontal_bias="0.0"
+        emojicon:layout_constraintStart_toStartOf="parent"
+        emojicon:srcCompat="@drawable/image"
+        android:adjustViewBounds="true"/>
+
+    <ImageView
+        android:id="@+id/scrolldown"
+        android:layout_width="33dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="60dp"
+        emojicon:layout_constraintBottom_toTopOf="@+id/messageInputContainer"
+        emojicon:layout_constraintEnd_toEndOf="parent"
+        emojicon:layout_constraintTop_toTopOf="parent"
+        emojicon:layout_constraintVertical_bias="1.0"
+        emojicon:srcCompat="@drawable/scrolldown" />
+
+    <LinearLayout
+        android:id="@+id/replylayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        emojicon:layout_constraintBottom_toTopOf="@+id/btnSend"
+        emojicon:layout_constraintEnd_toEndOf="parent"
+        emojicon:layout_constraintStart_toStartOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightdivider"
+                emojicon:layout_constraintBottom_toTopOf="@+id/userreply"
+                emojicon:layout_constraintEnd_toEndOf="parent"
+                emojicon:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/userreply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="2dp"
+                android:text="replying name"
+                android:textColor="@color/gray"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                emojicon:layout_constraintBottom_toBottomOf="parent"
+                emojicon:layout_constraintEnd_toEndOf="parent"
+                emojicon:layout_constraintStart_toStartOf="parent"
+                emojicon:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/cancel"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="18dp"
+                emojicon:layout_constraintBottom_toBottomOf="parent"
+                emojicon:layout_constraintEnd_toEndOf="parent"
+                emojicon:layout_constraintTop_toTopOf="parent"
+                emojicon:srcCompat="@drawable/cancel" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/replytext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:lines="1"
+            android:layout_marginEnd="28dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="15dp"
+            android:text=""
+            android:textSize="12sp"
+            android:textColor="@color/repling_text"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

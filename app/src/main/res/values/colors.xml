@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8BC34A</color>
+    <color name="colorPrimaryDark">#0288D1</color>
+    <color name="colorAccent">#4fa881</color>
+    <color name="colorIndivateTab">#FFC107</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorCardView">#2A2F32</color>
+    <color name="grey_200">#EEEEEE</color>
+    <color name="grey_500">#a4a4a4</color>
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_800">#212121</color>
+    <color name="bg">#FFFFFF</color>
+    <color name="bglight">#FFFFFF</color>
+    <color name="repling_text">#A6A5A5</color>
+    <color name="friend_name">#B9000000</color>
+    <color name="colorE">#c4c4c4</color>
+    <color name="black">#000000</color>
+    <color name="lightdivider">#23FFFFFF</color>
+    <color name="Transparentnavigation">#00FFFF00</color>
+    <color name="GENTLE">#4CA1AF</color>
+    <color name="text_reply">#ACACAC</color>
+    <color name="edit_message">#EFEFEF</color>
+    <color name="edit_message_hint">#A7A7A7</color>
+    <color name="chat_from_another">#FFFFFF</color>
+    <color name="chat_byself">#2E7AFD</color>
+    <color name="chat_bg">#FFFFFF</color>
+
+    <color name="tab_inactive">@color/green_light</color>
+    <color name="floating_message_create">#2E7AFD</color>
+    <color name="channel_background">@color/off_white</color>
+    <color name="toolbar_background">@color/green_darker</color>
+    <color name="message_yours">@color/green_lightest</color>
+    <color name="message_theirs">@color/white</color>
+    <color name="message_input_button_inactive">@color/gray</color>
+    <color name="floating_message_send">#2E7AFD</color>
+
+    <!-- Palette Greens -->
+    <color name="green_lightest">#e2ffc7</color>
+    <color name="green_light">#7eb0ad</color>
+    <color name="green">#16cc3e</color>
+    <color name="green_dark">#19887a</color>
+    <color name="green_darker">#0e5e55</color>
+    <color name="green_darkest">#00574B</color>
+
+    <!-- White & Gray -->
+
+    <color name="white">#FFF</color>
+    <color name="off_white">#e0e0e0</color>
+    <color name="gray">#88898b</color>
+</resources>

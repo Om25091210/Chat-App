@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/date_of_chat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edittext_boder"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/gray"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/date_of_chat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/newmsgs" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/imageView3"
+            android:background="@drawable/reply_friend_draw"
+            android:padding="2dp"
+            android:text="replying to you"
+            android:textColor="@color/text_reply"
+            android:textSize="16sp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="@+id/textContentFriend"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginStart="20dp" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/text_reply"
+            app:layout_constraintBottom_toBottomOf="@+id/reply"
+            app:layout_constraintEnd_toStartOf="@+id/reply"
+            app:layout_constraintTop_toTopOf="@+id/reply" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView3"
+            android:layout_width="36dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/default_avata"
+            app:layout_constraintBottom_toBottomOf="@+id/textContentFriend"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textContentFriend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/rounded_corner2"
+            android:padding="10dp"
+            android:text="Hello jon dow"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/reply" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView3"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="50dp"
+            android:adjustViewBounds="true"
+            app:riv_corner_radius_bottom_left="20dp"
+            app:riv_corner_radius_bottom_right="20dp"
+            app:riv_corner_radius_top_left="20dp"
+            app:riv_corner_radius_top_right="20dp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="36dp"
+            android:layout_height="13dp"
+            android:layout_below="@+id/imageView3"
+            android:layout_alignStart="@+id/imageView3"
+            android:text=""
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textContentFriend"
+            app:layout_constraintStart_toEndOf="@+id/textContentFriend" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
